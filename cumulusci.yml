@@ -1,0 +1,23 @@
+minimum_cumulusci_version: '3.14.0'
+project:
+    name: AdmitAdminsToSandbox
+    package:
+        name:  AdmitAdminsToSandbox
+        api_version: '48.0'
+    source_format: sfdx
+
+tasks:
+    robot:
+        options:
+            suites: robot/AdmitAdminsToSandbox/tests
+            options:
+                outputdir: robot/AdmitAdminsToSandbox/results
+
+    robot_testdoc:
+        options:
+            path: robot/AdmitAdminsToSandbox/tests
+            output: robot/AdmitAdminsToSandbox/doc/AdmitAdminsToSandbox_tests.html
+
+    run_tests:
+        options:
+            required_org_code_coverage_percent: 75
