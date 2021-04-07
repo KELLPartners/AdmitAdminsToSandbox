@@ -1,12 +1,24 @@
 # AdmitAdminsToSandbox
+# Status: NOT READY FOR USE
 
-Add a brief description of this project here, in Markdown format.
-It will be shown on the main page of the project's GitHub repository.
+Owner: Sean Conner
 
-## Development
+Adds post-sandbox-deploy class that automatically removes the ".invalid" string at the end of all System Administrators' email addresses.
 
-To work on this project in a scratch org:
+## Features and Use
 
-1. [Set up CumulusCI](https://cumulusci.readthedocs.io/en/latest/tutorial.html)
-2. Run `cci flow run dev_org --org dev` to deploy this project.
-3. Run `cci org browser dev` to open the org in your browser.
+Single post-sandbox-deploy class (KELL_AdmitAdminsToSandbox) and test class (KELL_AdmitAdminsToSandbox_TEST) to automatically modify all SYSTEM ADMINISTRATOR profiles copied into a new sandbox to have the appropriate email address values. This feature is generally helpful only when clients frequently deploy new sandboxes or we at KELL will need to do so.
+
+To use, siimply refer to the main class (KELL_AdmitAdminsToSandbox) when creating new sandboxes. 
+
+## Deployment Steps
+
+1. Use the installer <a href="https://githubsfdeploy.herokuapp.com?owner=KELLPartners&repo=AdmitAdminsToSandbox&ref=main">here</a> 
+    1. Be sure to verify the Production or Sandbox location before proceeding
+    2. Leave all other settings as-is
+    3. Use the "Login" button to authorize access to the org and proceed, and complete the installation as you would expect
+2. Refer to the class as noted in "Features and Use" when creating new sandboxes.
+
+## Future Development Work
+
+Tidy up copyright and description info, add documentation
